@@ -10,7 +10,7 @@ const api = axios.create({
 const get = async (endpoint, params = {}) => {
   params.token = process.env.TINY_API_TOKEN;
   params.formato = 'json';
-  console.log('Params:', params); // Verifique os parâmetros
+  console.log('Params:', params);
   try {
     const resposta = await api.get(endpoint, { params });
     if (resposta.data.retorno.erros) {
