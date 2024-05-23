@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const rotasFinanceiras = require('./rotas/rotasFinanceiras');
 
-console.log('Token:', process.env.TINY_API_TOKEN); // Verifique se o token está sendo carregado
+console.log('Token:', process.env.TINY_API_TOKEN);
 
 app.use(express.json());
 app.use('/api/financeiro', rotasFinanceiras);
